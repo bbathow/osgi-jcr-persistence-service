@@ -33,6 +33,14 @@
             <artifactId>log4j</artifactId>
             <version>1.2.16</version>
             <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.dependencymanager</artifactId>
+            <version>3.1.0</version>
+            <type>jar</type>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -46,7 +54,8 @@
                 <configuration>
                     <instructions>
                         <Bundle-Activator>me.shreyas.osgi.jcr.persistence.service.impl.Activator</Bundle-Activator>
-                        <Export-Package/>
+                        <Export-Package>me.shreyas.osgi.jcr.persistence.service</Export-Package>
+                        <Private-Package>me.shreyas.osgi.jcr.persistence.service.*</Private-Package>
                     </instructions>
                 </configuration>
             </plugin>
