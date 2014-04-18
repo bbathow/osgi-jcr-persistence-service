@@ -47,6 +47,11 @@
             <artifactId>jackrabbit-core</artifactId>
             <version>2.6.5</version>
         </dependency>
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.3</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -65,6 +70,21 @@
                             !org.apache.jackrabbit.test,
                             !javax.swing,
                             !javax.swing.border,
+                            !com.sun.security.auth.module,
+                            !javax.resource,
+                            !javax.resource.spi,
+                            !javax.resource.spi.endpoint,
+                            !javax.resource.spi.security,
+                            !oracle.i18n.text, 
+                            !oracle.i18n.text.converter,
+                            !oracle.ons,
+                            !oracle.security.pki,
+                            !oracle.xdb,
+                            !oracle.xml.parser.v2,
+                            !org.objectweb.asm,
+                            !sun.security.krb5,
+                            !sun.security.krb5.internal,
+                            !sun.security.util,
                             *
                         </Import-Package>
                         <!-- see Embedding Dependencies at [0] -->
@@ -73,6 +93,7 @@
                             concurrent|
                             jackrabbit-core|jackrabbit-spi|jackrabbit-spi-commons|
                             lucene-core|
+                            ojdbc6|
                             tika-core
                         </Embed-Dependency>
                         <Embed-Transitive>true</Embed-Transitive>
